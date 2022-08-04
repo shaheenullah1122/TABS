@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            body {
+                font-family: Arial;
+            }
+
+            /* Style the tab */
+            .tab {
+                overflow: hidden;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+            }
+
+            /* Style the buttons inside the tab */
+            .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+
+            /* Change background color of buttons on hover */
+            .tab button:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+            /* Style the tab content */
+            .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                border-top: none;
+                width: 400px;
+            }
+
+            #paragraph1,
+            .tablinks:hover {
+                background-color: crimson;
+            }
+
+            #paragraph2 {
+                background-color: greenyellow;
+            }
+
+            #paragraph3 {
+                background-color: coral;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Tabs</h2>
+
+        <div class="tab container">
+            <button class="tablinks" onclick="toggletext(event, 'paragraph1')">
+                TAB-1
+            </button>
+            <button class="tablinks" onclick="toggletext(event, 'paragraph2')">
+                TAB-2
+            </button>
+            <button class="tablinks" onclick="toggletext(event, 'paragraph3')">
+                TAB-3
+            </button>
+        </div>
+        <div class="container">
+            <div id="paragraph1" class="tabcontent">
+                <h3>LOREMIPSUM</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laborum illum nulla dolore, mollitia dolorum nam dolores
+                    aliquid non autem eos iusto, vitae consequatur maiores nemo
+                    placeat voluptatibus iure odio. Voluptas magni voluptatum
+                    vero, alias, exercitationem ducimus ea nisi, saepe
+                    voluptates illum excepturi velit! Consequatur recusandae
+                    molestias hic reiciendis incidunt commodi perspiciatis
+                    nesciunt eligendi, odio quod ratione, eum totam rem
+                    voluptatem? Perspiciatis labore voluptas quod quos eaque id
+                    consequuntur ut quidem sapiente molestias quas tenetur est
+                    facere rem perferendis aspernatur vel rerum omnis
+                    doloremque, nam, beatae hic? Quis quas beatae nisi.
+                </p>
+            </div>
+
+            <div id="paragraph2" class="tabcontent">
+                <h3>LOREMIPSUM</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Beatae, nisi? Vitae cum unde accusantium architecto velit
+                    obcaecati dolore quos nesciunt. Fugiat quidem commodi quo
+                    culpa? Culpa qui recusandae aliquam vel minima tempora
+                    dolores! Nihil ea voluptatem quisquam nostrum cumque non
+                    laborum impedit nam, error placeat commodi saepe ipsum
+                    praesentium vitae! Quia error pariatur minus in ut! Cum,
+                    quia totam tempora hic a ipsa adipisci quos sequi, beatae
+                    vel quae assumenda veniam non atque maiores, sint optio
+                    ducimus aliquam deserunt quod. Provident expedita odit
+                    voluptas accusantium autem, repellendus vel numquam
+                    perferendis eveniet.
+                </p>
+            </div>
+
+            <div id="paragraph3" class="tabcontent">
+                <h3>LOREMIPSUM</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Harum perferendis fugiat maiores quaerat libero ut esse,
+                    necessitatibus hic corporis laboriosam numquam cupiditate,
+                    ex corrupti quo odio eligendi deserunt, et dolores!
+                    Molestias ipsum reiciendis repellendus ipsa eaque voluptate
+                    consequuntur dignissimos facere, suscipit accusamus
+                    quibusdam consequatur doloremque a at facilis ex molestiae
+                    corporis, rerum alias quos quia deleniti nostrum maxime!
+                    Veniam eum voluptatibus natus numquam blanditiis explicabo,
+                    odio fugiat quo at quidem consequuntur nesciunt ipsum id
+                    iste voluptate deserunt debitis amet error repellendus.
+                    Autem omnis cupiditate mollitia illum sapiente doloribus
+                    voluptatem distinctio minus quae.
+                </p>
+            </div>
+        </div>
+        <script>
+            function toggletext(evt, LOREMIPSUM) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName('tabcontent');
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = 'none';
+                }
+                tablinks = document.getElementsByClassName('tablinks');
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(
+                        ' active',
+                        ''
+                    );
+                }
+                document.getElementById(LOREMIPSUM).style.display = 'block';
+                evt.currentTarget.className += ' active';
+            }
+        </script>
+    </body>
+</html>
